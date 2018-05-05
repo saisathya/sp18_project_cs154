@@ -22,61 +22,46 @@
 			<tag>Machine3</tag>
 			<x>437.0</x>
 			<y>156.0</y>
-		</block>
-		<block id="4" name="q4">
-			<tag>Machine4</tag>
-			<x>558.0</x>
-			<y>155.0</y>
 			<final/>
 		</block>
 		<!--The list of transitions.-->
 		<transition>
-			<from>0</from>
+			<from>1</from>
 			<to>1</to>
-			<read>I</read>
-			<write>0</write>
-			<move>L</move>
+			<read>!0</read>
+			<write>~</write>
+			<move>R</move>
 		</transition>
 		<transition>
 			<from>1</from>
 			<to>2</to>
 			<read>0</read>
-			<write>1</write>
-			<move>L</move>
-		</transition>
-		<transition>
-			<from>2</from>
-			<to>2</to>
-			<read>1</read>
-			<write>1</write>
-			<move>L</move>
-		</transition>
-		<transition>
-			<from>3</from>
-			<to>4</to>
-			<read>1</read>
 			<write>I</write>
-			<move>S</move>
+			<move>L</move>
 		</transition>
 		<transition>
 			<from>2</from>
 			<to>3</to>
-			<read>C</read>
-			<write>C</write>
+			<read>U</read>
+			<write>0</write>
 			<move>R</move>
 		</transition>
 		<transition>
-			<from>2</from>
-			<to>3</to>
-			<read>0</read>
-			<write>0</write>
+			<from>0</from>
+			<to>1</to>
+			<read>I</read>
+			<write>U</write>
 			<move>R</move>
 		</transition>
 		<!--The list of automata-->
 		<Machine0/>
 		<Machine2/>
 		<Machine1/>
-		<Machine4/>
 		<Machine3/>
+		<note>
+			<text>Shift right mid</text>
+			<x>95.0</x>
+			<y>58.0</y>
+		</note>
 	</automaton>
 </structure>

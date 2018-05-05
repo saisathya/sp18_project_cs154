@@ -273,5 +273,15 @@
 			<x>256.0</x>
 			<y>62.0</y>
 		</note>
+		<note>
+			<text>Shift left at the middle of string</text>
+			<x>332.0</x>
+			<y>302.0</y>
+		</note>
+		<note>
+			<text/>
+			<x>609.0</x>
+			<y>276.0</y>
+		</note>
 	</automaton>
 </structure>
