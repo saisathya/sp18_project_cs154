@@ -4,32 +4,32 @@
 		<!--The list of states.-->
 		<block id="0" name="q0">
 			<tag>Machine0</tag>
-			<x>87.0</x>
-			<y>99.0</y>
+			<x>95.0</x>
+			<y>136.0</y>
 			<initial/>
 		</block>
 		<block id="1" name="q1">
 			<tag>Machine1</tag>
-			<x>198.0</x>
-			<y>100.0</y>
+			<x>185.0</x>
+			<y>136.0</y>
 		</block>
 		<block id="2" name="q2">
 			<tag>Machine2</tag>
-			<x>315.0</x>
-			<y>102.0</y>
+			<x>273.0</x>
+			<y>135.0</y>
 		</block>
 		<block id="3" name="q3">
 			<tag>Machine3</tag>
-			<x>438.0</x>
-			<y>106.0</y>
+			<x>365.0</x>
+			<y>134.0</y>
 		</block>
 		<!--The list of transitions.-->
 		<transition>
-			<from>2</from>
-			<to>3</to>
+			<from>1</from>
+			<to>2</to>
 			<read/>
-			<write>1</write>
-			<move>S</move>
+			<write>C</write>
+			<move>L</move>
 		</transition>
 		<transition>
 			<from>0</from>
@@ -46,16 +46,22 @@
 			<move>L</move>
 		</transition>
 		<transition>
-			<from>1</from>
-			<to>2</to>
+			<from>2</from>
+			<to>3</to>
 			<read/>
-			<write>C</write>
-			<move>L</move>
+			<write>1</write>
+			<move>S</move>
 		</transition>
 		<!--The list of automata-->
 		<Machine0/>
 		<Machine2/>
 		<Machine1/>
 		<Machine3/>
+		<note>
+			<text>Adds '1CI' before the string to indicate go to first state
+and indicates first alphabet to read</text>
+			<x>10.0</x>
+			<y>6.0</y>
+		</note>
 	</automaton>
 </structure>

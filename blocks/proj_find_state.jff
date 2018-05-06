@@ -4,40 +4,40 @@
 		<!--The list of states.-->
 		<block id="0" name="q0">
 			<tag>Machine0</tag>
-			<x>107.0</x>
-			<y>181.0</y>
+			<x>170.0</x>
+			<y>299.0</y>
 		</block>
 		<block id="1" name="q1">
 			<tag>Machine1</tag>
-			<x>226.0</x>
-			<y>73.0</y>
+			<x>289.0</x>
+			<y>191.0</y>
 			<initial/>
 		</block>
 		<block id="2" name="q2">
 			<tag>Machine2</tag>
-			<x>361.0</x>
-			<y>72.0</y>
+			<x>424.0</x>
+			<y>190.0</y>
 		</block>
 		<block id="3" name="q3">
 			<tag>Machine3</tag>
-			<x>482.0</x>
-			<y>72.0</y>
+			<x>545.0</x>
+			<y>190.0</y>
 			<final/>
 		</block>
 		<block id="4" name="q4">
 			<tag>Machine4</tag>
-			<x>436.0</x>
-			<y>218.0</y>
+			<x>374.0</x>
+			<y>284.0</y>
 		</block>
 		<block id="5" name="q5">
 			<tag>Machine5</tag>
-			<x>259.0</x>
-			<y>334.0</y>
+			<x>345.0</x>
+			<y>433.0</y>
 		</block>
 		<block id="6" name="q6">
 			<tag>Machine6</tag>
-			<x>518.0</x>
-			<y>333.0</y>
+			<x>475.0</x>
+			<y>331.0</y>
 		</block>
 		<!--The list of transitions.-->
 		<transition>
@@ -48,11 +48,11 @@
 			<move>L</move>
 		</transition>
 		<transition>
-			<from>1</from>
-			<to>0</to>
-			<read>1</read>
-			<write>X</write>
-			<move>R</move>
+			<from>2</from>
+			<to>3</to>
+			<read>I</read>
+			<write>I</write>
+			<move>S</move>
 		</transition>
 		<transition>
 			<from>5</from>
@@ -62,17 +62,10 @@
 			<move>L</move>
 		</transition>
 		<transition>
-			<from>2</from>
-			<to>3</to>
-			<read>I</read>
-			<write>I</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>5</to>
-			<read>D</read>
-			<write>D</write>
+			<from>5</from>
+			<to>0</to>
+			<read>1</read>
+			<write>x</write>
 			<move>R</move>
 		</transition>
 		<transition>
@@ -83,6 +76,13 @@
 			<move>R</move>
 		</transition>
 		<transition>
+			<from>1</from>
+			<to>0</to>
+			<read>1</read>
+			<write>X</write>
+			<move>R</move>
+		</transition>
+		<transition>
 			<from>6</from>
 			<to>6</to>
 			<read>!D</read>
@@ -90,11 +90,18 @@
 			<move>L</move>
 		</transition>
 		<transition>
-			<from>5</from>
-			<to>0</to>
-			<read>1</read>
-			<write>x</write>
+			<from>0</from>
+			<to>5</to>
+			<read>D</read>
+			<write>D</write>
 			<move>R</move>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>4</to>
+			<read>F</read>
+			<write>F</write>
+			<move>L</move>
 		</transition>
 		<transition>
 			<from>0</from>
@@ -120,6 +127,13 @@
 		<transition>
 			<from>2</from>
 			<to>2</to>
+			<read>0</read>
+			<write>0</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>2</to>
 			<read>Y</read>
 			<write>Y</write>
 			<move>R</move>
@@ -153,20 +167,6 @@
 			<move>R</move>
 		</transition>
 		<transition>
-			<from>0</from>
-			<to>0</to>
-			<read>I</read>
-			<write>I</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>2</from>
-			<to>2</to>
-			<read>0</read>
-			<write>0</write>
-			<move>R</move>
-		</transition>
-		<transition>
 			<from>2</from>
 			<to>2</to>
 			<read>1</read>
@@ -175,16 +175,9 @@
 		</transition>
 		<transition>
 			<from>0</from>
-			<to>4</to>
-			<read>F</read>
-			<write>F</write>
-			<move>L</move>
-		</transition>
-		<transition>
-			<from>6</from>
 			<to>0</to>
-			<read>D</read>
-			<write>N</write>
+			<read>I</read>
+			<write>I</write>
 			<move>R</move>
 		</transition>
 		<transition>
@@ -192,6 +185,13 @@
 			<to>1</to>
 			<read>X</read>
 			<write>X</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>0</to>
+			<read>D</read>
+			<write>N</write>
 			<move>R</move>
 		</transition>
 		<!--The list of automata-->
@@ -202,5 +202,12 @@
 		<Machine3/>
 		<Machine6/>
 		<Machine5/>
+		<note>
+			<text>Find for appropriate state 
+If transition function doesn't have anymore 1s, change that particular D to N
+Exits at I once all the 1s before C has been changed to X</text>
+			<x>10.0</x>
+			<y>8.0</y>
+		</note>
 	</automaton>
 </structure>
