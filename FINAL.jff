@@ -4,45 +4,56 @@
 		<!--The list of states.-->
 		<block id="0" name="proj_setup">
 			<tag>proj_setup.jff</tag>
-			<x>113.0</x>
-			<y>177.0</y>
+			<x>101.0</x>
+			<y>257.0</y>
 			<initial/>
+		</block>
+		<block id="1" name="proj_check_final">
+			<tag>proj_check_final.jff</tag>
+			<x>615.0</x>
+			<y>136.0</y>
 		</block>
 		<block id="2" name="proj_find_input">
 			<tag>proj_find_input.jff</tag>
-			<x>386.0</x>
-			<y>173.0</y>
+			<x>374.0</x>
+			<y>253.0</y>
 		</block>
 		<block id="3" name="proj_find_state">
 			<tag>proj_find_state.jff</tag>
-			<x>235.0</x>
-			<y>175.0</y>
+			<x>223.0</x>
+			<y>255.0</y>
 		</block>
 		<block id="4" name="proj_write_state">
 			<tag>proj_write_state.jff</tag>
-			<x>537.0</x>
-			<y>174.0</y>
+			<x>525.0</x>
+			<y>254.0</y>
 		</block>
 		<block id="5" name="proj_reset">
 			<tag>proj_reset.jff</tag>
-			<x>395.0</x>
-			<y>301.0</y>
+			<x>383.0</x>
+			<y>381.0</y>
 		</block>
 		<block id="6" name="proj_find_direction">
 			<tag>proj_find_direction.jff</tag>
-			<x>805.0</x>
-			<y>170.0</y>
+			<x>793.0</x>
+			<y>250.0</y>
 		</block>
 		<block id="7" name="q7">
 			<tag>Machine7</tag>
-			<x>500.0</x>
-			<y>46.0</y>
+			<x>641.0</x>
+			<y>40.0</y>
 			<final/>
 		</block>
 		<block id="8" name="proj_write_alphabet">
 			<tag>proj_write_alphabet.jff</tag>
-			<x>663.0</x>
-			<y>170.0</y>
+			<x>651.0</x>
+			<y>250.0</y>
+		</block>
+		<block id="9" name="q9">
+			<tag>Machine9</tag>
+			<x>736.0</x>
+			<y>112.0</y>
+			<final/>
 		</block>
 		<!--The list of transitions.-->
 		<transition>
@@ -88,17 +99,31 @@
 			<move>S</move>
 		</transition>
 		<transition>
-			<from>4</from>
+			<from>8</from>
+			<to>6</to>
+			<read>~</read>
+			<write>~</write>
+			<move>S</move>
+		</transition>
+		<transition>
+			<from>1</from>
 			<to>7</to>
+			<read>A</read>
+			<write>A</write>
+			<move>S</move>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>1</to>
 			<read>F</read>
 			<write>F</write>
 			<move>S</move>
 		</transition>
 		<transition>
-			<from>8</from>
-			<to>6</to>
-			<read>~</read>
-			<write>~</write>
+			<from>1</from>
+			<to>9</to>
+			<read>R</read>
+			<write>R</write>
 			<move>S</move>
 		</transition>
 		<!--The list of automata-->
@@ -1646,6 +1671,7 @@ Otherwise, rewrite the state and return at I</text>
 			<Machine1/>
 			<Machine3/>
 		</proj_reset.jff>
+		<Machine9/>
 		<proj_find_state.jff>
 			<!--The list of states.-->
 			<block id="0" name="q0">
@@ -2416,6 +2442,306 @@ Exits at I once all the 1s before C has been changed to X</text>
 			<Machine6/>
 			<Machine5/>
 		</proj_write_alphabet.jff>
+		<proj_check_final.jff>
+			<!--The list of states.-->
+			<block id="0" name="q0">
+				<tag>Machine0</tag>
+				<x>136.0</x>
+				<y>235.0</y>
+				<initial/>
+			</block>
+			<block id="1" name="q1">
+				<tag>Machine1</tag>
+				<x>263.0</x>
+				<y>236.0</y>
+			</block>
+			<block id="2" name="q2">
+				<tag>Machine2</tag>
+				<x>381.0</x>
+				<y>239.0</y>
+			</block>
+			<block id="3" name="q3">
+				<tag>Machine3</tag>
+				<x>418.0</x>
+				<y>411.0</y>
+			</block>
+			<block id="4" name="q4">
+				<tag>Machine4</tag>
+				<x>505.0</x>
+				<y>238.0</y>
+			</block>
+			<block id="6" name="q6">
+				<tag>Machine6</tag>
+				<x>502.0</x>
+				<y>74.0</y>
+			</block>
+			<block id="7" name="q7">
+				<tag>Machine7</tag>
+				<x>619.0</x>
+				<y>74.0</y>
+			</block>
+			<block id="8" name="q8">
+				<tag>Machine8</tag>
+				<x>739.0</x>
+				<y>72.0</y>
+			</block>
+			<block id="9" name="q9">
+				<tag>Machine9</tag>
+				<x>764.0</x>
+				<y>239.0</y>
+			</block>
+			<block id="10" name="q10">
+				<tag>Machine10</tag>
+				<x>886.0</x>
+				<y>239.0</y>
+			</block>
+			<block id="11" name="q11">
+				<tag>Machine11</tag>
+				<x>479.0</x>
+				<y>568.0</y>
+			</block>
+			<block id="12" name="q12">
+				<tag>Machine12</tag>
+				<x>626.0</x>
+				<y>568.0</y>
+				<final/>
+			</block>
+			<block id="13" name="q13">
+				<tag>Machine13</tag>
+				<x>870.0</x>
+				<y>72.0</y>
+				<final/>
+			</block>
+			<!--The list of transitions.-->
+			<transition>
+				<from>6</from>
+				<to>7</to>
+				<read>C</read>
+				<write>C</write>
+				<move>L</move>
+			</transition>
+			<transition>
+				<from>2</from>
+				<to>4</to>
+				<read>C</read>
+				<write>C</write>
+				<move>L</move>
+			</transition>
+			<transition>
+				<from>1</from>
+				<to>2</to>
+				<read>1</read>
+				<write>m</write>
+				<move>L</move>
+			</transition>
+			<transition>
+				<from>10</from>
+				<to>11</to>
+				<read>F</read>
+				<write>F</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>11</from>
+				<to>1</to>
+				<read>1</read>
+				<write>1</write>
+				<move>S</move>
+			</transition>
+			<transition>
+				<from>3</from>
+				<to>3</to>
+				<read>!F</read>
+				<write>~</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>10</from>
+				<to>10</to>
+				<read>!F</read>
+				<write>~</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>9</from>
+				<to>9</to>
+				<read>M</read>
+				<write>1</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>4</from>
+				<to>9</to>
+				<read/>
+				<write/>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>8</from>
+				<to>8</to>
+				<read>!□</read>
+				<write>~</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>9</from>
+				<to>10</to>
+				<read>C</read>
+				<write>C</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>2</from>
+				<to>2</to>
+				<read>!C</read>
+				<write>~</write>
+				<move>L</move>
+			</transition>
+			<transition>
+				<from>6</from>
+				<to>6</to>
+				<read>!C</read>
+				<write>~</write>
+				<move>L</move>
+			</transition>
+			<transition>
+				<from>7</from>
+				<to>8</to>
+				<read/>
+				<write/>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>4</from>
+				<to>3</to>
+				<read>1</read>
+				<write>M</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>11</from>
+				<to>11</to>
+				<read>m</read>
+				<write>F</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>11</from>
+				<to>11</to>
+				<read>0</read>
+				<write>F</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>0</from>
+				<to>1</to>
+				<read>F</read>
+				<write>F</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>8</from>
+				<to>13</to>
+				<read/>
+				<write>A</write>
+				<move>S</move>
+			</transition>
+			<transition>
+				<from>1</from>
+				<to>6</to>
+				<read>0</read>
+				<write>0</write>
+				<move>L</move>
+			</transition>
+			<transition>
+				<from>1</from>
+				<to>6</to>
+				<read/>
+				<write/>
+				<move>L</move>
+			</transition>
+			<transition>
+				<from>4</from>
+				<to>4</to>
+				<read>M</read>
+				<write>M</write>
+				<move>L</move>
+			</transition>
+			<transition>
+				<from>7</from>
+				<to>7</to>
+				<read>M</read>
+				<write>M</write>
+				<move>L</move>
+			</transition>
+			<transition>
+				<from>1</from>
+				<to>1</to>
+				<read>m</read>
+				<write>m</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>11</from>
+				<to>11</to>
+				<read>F</read>
+				<write>F</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>1</from>
+				<to>1</to>
+				<read>F</read>
+				<write>F</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>11</from>
+				<to>12</to>
+				<read/>
+				<write>R</write>
+				<move>S</move>
+			</transition>
+			<transition>
+				<from>3</from>
+				<to>1</to>
+				<read>F</read>
+				<write>F</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>7</from>
+				<to>9</to>
+				<read>1</read>
+				<write>1</write>
+				<move>R</move>
+			</transition>
+			<!--The list of automata-->
+			<Machine8/>
+			<Machine7/>
+			<Machine9/>
+			<Machine11/>
+			<Machine10/>
+			<Machine13/>
+			<Machine12/>
+			<Machine0/>
+			<Machine2/>
+			<Machine1/>
+			<Machine4/>
+			<Machine3/>
+			<Machine6/>
+			<note>
+				<text>Accepts</text>
+				<x>0.0</x>
+				<y>0.0</y>
+			</note>
+			<note>
+				<text>Final State is bigger 
+than current state</text>
+				<x>0.0</x>
+				<y>0.0</y>
+			</note>
+		</proj_check_final.jff>
 		<proj_find_input.jff>
 			<!--The list of states.-->
 			<block id="0" name="q0">
