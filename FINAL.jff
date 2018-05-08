@@ -1872,8 +1872,8 @@ Otherwise, rewrite the state and return at I</text>
 				<text>Find for appropriate state 
 If transition function doesn't have anymore 1s, change that particular D to N
 Exits at I once all the 1s before C has been changed to X</text>
-				<x>0.0</x>
-				<y>0.0</y>
+				<x>10.0</x>
+				<y>8.0</y>
 			</note>
 		</proj_find_state.jff>
 		<proj_write_alphabet.jff>
