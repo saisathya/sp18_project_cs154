@@ -4,32 +4,54 @@
 		<!--The list of states.-->
 		<block id="0" name="q0">
 			<tag>Machine0</tag>
-			<x>95.0</x>
-			<y>136.0</y>
-			<initial/>
+			<x>417.0</x>
+			<y>193.0</y>
 		</block>
 		<block id="1" name="q1">
 			<tag>Machine1</tag>
-			<x>185.0</x>
-			<y>136.0</y>
+			<x>536.0</x>
+			<y>193.0</y>
 		</block>
 		<block id="2" name="q2">
 			<tag>Machine2</tag>
-			<x>273.0</x>
-			<y>135.0</y>
+			<x>657.0</x>
+			<y>193.0</y>
 		</block>
 		<block id="3" name="q3">
 			<tag>Machine3</tag>
-			<x>365.0</x>
-			<y>134.0</y>
+			<x>762.0</x>
+			<y>192.0</y>
+		</block>
+		<block id="4" name="q4">
+			<tag>Machine4</tag>
+			<x>120.0</x>
+			<y>192.0</y>
+			<initial/>
+		</block>
+		<block id="5" name="q5">
+			<tag>Machine5</tag>
+			<x>253.0</x>
+			<y>287.0</y>
+		</block>
+		<block id="6" name="q6">
+			<tag>Machine6</tag>
+			<x>359.0</x>
+			<y>289.0</y>
 		</block>
 		<!--The list of transitions.-->
 		<transition>
-			<from>1</from>
-			<to>2</to>
-			<read/>
-			<write>C</write>
-			<move>L</move>
+			<from>4</from>
+			<to>0</to>
+			<read>1</read>
+			<write>1</write>
+			<move>S</move>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>5</to>
+			<read>D</read>
+			<write>D</write>
+			<move>S</move>
 		</transition>
 		<transition>
 			<from>0</from>
@@ -37,6 +59,13 @@
 			<read/>
 			<write>I</write>
 			<move>L</move>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>0</to>
+			<read>~</read>
+			<write>~</write>
+			<move>S</move>
 		</transition>
 		<transition>
 			<from>0</from>
@@ -52,11 +81,35 @@
 			<write>1</write>
 			<move>S</move>
 		</transition>
+		<transition>
+			<from>5</from>
+			<to>5</to>
+			<read>!□</read>
+			<write>~</write>
+			<move>L</move>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read/>
+			<write>C</write>
+			<move>L</move>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>6</to>
+			<read/>
+			<write>1</write>
+			<move>L</move>
+		</transition>
 		<!--The list of automata-->
 		<Machine0/>
 		<Machine2/>
 		<Machine1/>
+		<Machine4/>
 		<Machine3/>
+		<Machine6/>
+		<Machine5/>
 		<note>
 			<text>Adds '1CI' before the string to indicate go to first state
 and indicates first alphabet to read</text>
