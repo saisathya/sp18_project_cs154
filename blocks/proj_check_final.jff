@@ -72,20 +72,6 @@
 		</block>
 		<!--The list of transitions.-->
 		<transition>
-			<from>7</from>
-			<to>9</to>
-			<read>1</read>
-			<write>1</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>11</from>
-			<to>11</to>
-			<read>1</read>
-			<write>F</write>
-			<move>R</move>
-		</transition>
-		<transition>
 			<from>1</from>
 			<to>6</to>
 			<read>0</read>
@@ -98,6 +84,34 @@
 			<read/>
 			<write/>
 			<move>L</move>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>7</to>
+			<read>C</read>
+			<write>C</write>
+			<move>L</move>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>4</to>
+			<read>C</read>
+			<write>C</write>
+			<move>L</move>
+		</transition>
+		<transition>
+			<from>11</from>
+			<to>12</to>
+			<read/>
+			<write>R</write>
+			<move>S</move>
+		</transition>
+		<transition>
+			<from>11</from>
+			<to>11</to>
+			<read>1</read>
+			<write>F</write>
+			<move>R</move>
 		</transition>
 		<transition>
 			<from>3</from>
@@ -121,13 +135,6 @@
 			<move>R</move>
 		</transition>
 		<transition>
-			<from>1</from>
-			<to>2</to>
-			<read>1</read>
-			<write>m</write>
-			<move>L</move>
-		</transition>
-		<transition>
 			<from>9</from>
 			<to>9</to>
 			<read>M</read>
@@ -135,10 +142,38 @@
 			<move>R</move>
 		</transition>
 		<transition>
+			<from>11</from>
+			<to>1</to>
+			<read>0</read>
+			<write>F</write>
+			<move>R</move>
+		</transition>
+		<transition>
 			<from>8</from>
 			<to>8</to>
 			<read>!□</read>
 			<write>~</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>8</from>
+			<to>13</to>
+			<read/>
+			<write>A</write>
+			<move>S</move>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>3</to>
+			<read>1</read>
+			<write>M</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>7</from>
+			<to>8</to>
+			<read/>
+			<write/>
 			<move>R</move>
 		</transition>
 		<transition>
@@ -156,17 +191,24 @@
 			<move>L</move>
 		</transition>
 		<transition>
-			<from>7</from>
-			<to>8</to>
-			<read/>
-			<write/>
-			<move>R</move>
+			<from>1</from>
+			<to>2</to>
+			<read>1</read>
+			<write>m</write>
+			<move>L</move>
 		</transition>
 		<transition>
 			<from>11</from>
 			<to>11</to>
 			<read>m</read>
 			<write>F</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>9</to>
+			<read/>
+			<write/>
 			<move>R</move>
 		</transition>
 		<transition>
@@ -177,59 +219,10 @@
 			<move>R</move>
 		</transition>
 		<transition>
-			<from>11</from>
-			<to>1</to>
-			<read>0</read>
-			<write>F</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>6</from>
-			<to>7</to>
-			<read>C</read>
-			<write>C</write>
-			<move>L</move>
-		</transition>
-		<transition>
-			<from>8</from>
-			<to>13</to>
-			<read/>
-			<write>A</write>
-			<move>S</move>
-		</transition>
-		<transition>
-			<from>11</from>
-			<to>12</to>
-			<read/>
-			<write>R</write>
-			<move>S</move>
-		</transition>
-		<transition>
-			<from>4</from>
+			<from>7</from>
 			<to>9</to>
-			<read/>
-			<write/>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>F</read>
-			<write>F</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>3</from>
-			<to>1</to>
-			<read>F</read>
-			<write>F</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>4</from>
-			<to>3</to>
 			<read>1</read>
-			<write>M</write>
+			<write>1</write>
 			<move>R</move>
 		</transition>
 		<transition>
@@ -247,11 +240,11 @@
 			<move>L</move>
 		</transition>
 		<transition>
-			<from>2</from>
-			<to>4</to>
-			<read>C</read>
-			<write>C</write>
-			<move>L</move>
+			<from>3</from>
+			<to>1</to>
+			<read>F</read>
+			<write>F</write>
+			<move>R</move>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -269,6 +262,13 @@
 		</transition>
 		<transition>
 			<from>1</from>
+			<to>1</to>
+			<read>F</read>
+			<write>F</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>0</from>
 			<to>1</to>
 			<read>F</read>
 			<write>F</write>
@@ -298,13 +298,13 @@
 		<note>
 			<text>Accepts</text>
 			<x>784.0</x>
-			<y>73.0</y>
+			<y>78.0</y>
 		</note>
 		<note>
 			<text>Final State is bigger 
 than current state</text>
 			<x>562.0</x>
-			<y>217.0</y>
+			<y>222.0</y>
 		</note>
 	</automaton>
 </structure>
