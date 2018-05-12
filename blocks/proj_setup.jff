@@ -33,11 +33,6 @@
 			<x>253.0</x>
 			<y>287.0</y>
 		</block>
-		<block id="6" name="q6">
-			<tag>Machine6</tag>
-			<x>359.0</x>
-			<y>289.0</y>
-		</block>
 		<!--The list of transitions.-->
 		<transition>
 			<from>4</from>
@@ -54,39 +49,11 @@
 			<move>S</move>
 		</transition>
 		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read/>
-			<write>I</write>
-			<move>L</move>
-		</transition>
-		<transition>
-			<from>6</from>
+			<from>5</from>
 			<to>0</to>
-			<read>~</read>
-			<write>~</write>
-			<move>S</move>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>0</to>
-			<read>!□</read>
-			<write>~</write>
-			<move>L</move>
-		</transition>
-		<transition>
-			<from>2</from>
-			<to>3</to>
 			<read/>
 			<write>1</write>
 			<move>S</move>
-		</transition>
-		<transition>
-			<from>5</from>
-			<to>5</to>
-			<read>!□</read>
-			<write>~</write>
-			<move>L</move>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -96,11 +63,32 @@
 			<move>L</move>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>0</to>
+			<read>!□</read>
+			<write>~</write>
+			<move>L</move>
+		</transition>
+		<transition>
 			<from>5</from>
-			<to>6</to>
+			<to>5</to>
+			<read>!□</read>
+			<write>~</write>
+			<move>L</move>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read/>
+			<write>I</write>
+			<move>L</move>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>3</to>
 			<read/>
 			<write>1</write>
-			<move>L</move>
+			<move>S</move>
 		</transition>
 		<!--The list of automata-->
 		<Machine0/>
@@ -108,7 +96,6 @@
 		<Machine1/>
 		<Machine4/>
 		<Machine3/>
-		<Machine6/>
 		<Machine5/>
 		<note>
 			<text>Adds '1CI' before the string to indicate go to first state
